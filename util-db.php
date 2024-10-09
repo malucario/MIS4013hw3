@@ -7,8 +7,6 @@ function get_db_connection(){
     if ($conn->connect_error) {
       return False;
     }
-    else {
-        return $conn;
-    }
+    return $conn;
 }
 ?>
