@@ -5,7 +5,7 @@ function get_db_connection(){
     
     // Check connection
     if ($conn->connect_error) {
-      return ?><h1>Error!</h1><?php;
+      return False;
     }
     else {
         return $conn;
