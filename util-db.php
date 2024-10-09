@@ -5,8 +5,10 @@ function get_db_connection(){
     
     // Check connection
     if ($conn->connect_error) {
-      return false;
+      return ?><h1>Error!</h1><?php;
     }
-    return $conn;
+    else {
+        return $conn;
+    }
 }
 ?>
