@@ -26,7 +26,7 @@
           <a class="nav-link" href="players.php">Players</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="players-by-team.php">Players with Teams</a>
+          <a class="nav-link" href="players-by-team.php">Players by Team</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="get-result.php">Get result</a>
