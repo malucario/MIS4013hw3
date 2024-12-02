@@ -6,7 +6,6 @@
         <th>ID</th>
         <th>First Name</th>
         <th>Last Name</th>
-        <th>School</th>
         <th>Position</th>
       </tr>
     </thead>
@@ -18,7 +17,6 @@ while ($player=$players->fetch_assoc()) {
     <td><?php echo $player['PlayerID']; ?></td>
     <td><?php echo $player['FirstName']; ?></td>
     <td><?php echo $player['LastName']; ?></td>
-    <td><?php echo $player['School']; ?></td>
     <td><?php echo $player['Position']; ?></td>
   </tr>
   <?php
