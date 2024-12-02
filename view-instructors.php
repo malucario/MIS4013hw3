@@ -13,9 +13,11 @@
 while ($instructor=$instructors->fetch_assoc()) {
   ?>
   <tr>
-    <td><?php echo $instructor['InstructorID']; ?></td>
-    <td><?php echo $instructor['InstructorName']; ?></td>
-    <td><?php echo $instructor['OfficeNumber']; ?></td>
+    <td><?php echo $instructor['PlayerID']; ?></td>
+    <td><?php echo $instructor['FirstName']; ?></td>
+    <td><?php echo $instructor['LastName']; ?></td>
+    <td><?php echo $instructor['School']; ?></td>
+    <td><?php echo $instructor['Position']; ?></td>
   </tr>
   <?php
 }
