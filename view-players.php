@@ -15,11 +15,11 @@
 while ($player=$players->fetch_assoc()) {
   ?>
   <tr>
-    <td><?php echo $players['PlayerID']; ?></td>
-    <td><?php echo $players['FirstName']; ?></td>
-    <td><?php echo $players['LastName']; ?></td>
-    <td><?php echo $players['School']; ?></td>
-    <td><?php echo $players['Position']; ?></td>
+    <td><?php echo $player['PlayerID']; ?></td>
+    <td><?php echo $player['FirstName']; ?></td>
+    <td><?php echo $player['LastName']; ?></td>
+    <td><?php echo $player['School']; ?></td>
+    <td><?php echo $player['Position']; ?></td>
   </tr>
   <?php
 }
