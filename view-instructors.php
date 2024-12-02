@@ -4,8 +4,10 @@
     <thead>
       <tr>
         <th>ID</th>
-        <th>Name</th>
-        <th>Office</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>School</th>
+        <th>Position</th>
       </tr>
     </thead>
     <tbody>
