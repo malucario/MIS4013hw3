@@ -12,7 +12,7 @@
     </thead>
     <tbody>
 <?php
-while ($players=$players->fetch_assoc()) {
+while ($player=$players->fetch_assoc()) {
   ?>
   <tr>
     <td><?php echo $players['PlayerID']; ?></td>
