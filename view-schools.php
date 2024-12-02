@@ -7,6 +7,7 @@
         <th>Name</th>
         <th>Mascot</th>
         <th>Conference</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -18,6 +19,7 @@ while ($school=$schools->fetch_assoc()) {
     <td><?php echo $school['SchoolName']; ?></td>
     <td><?php echo $school['SchoolMascot']; ?></td>
     <td><?php echo $school['SchoolConference']; ?></td>
+    <td><a href="players-by-team.php?id=<?php echo $school['SchoolRanking']; ?>">Players</a></td>
   </tr>
   <?php
 }
