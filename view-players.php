@@ -1,4 +1,4 @@
-<h1>Instructors</h1>
+<h1>Players</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
@@ -12,14 +12,14 @@
     </thead>
     <tbody>
 <?php
-while ($instructor=$instructors->fetch_assoc()) {
+while ($players=$players->fetch_assoc()) {
   ?>
   <tr>
-    <td><?php echo $instructor['PlayerID']; ?></td>
-    <td><?php echo $instructor['FirstName']; ?></td>
-    <td><?php echo $instructor['LastName']; ?></td>
-    <td><?php echo $instructor['School']; ?></td>
-    <td><?php echo $instructor['Position']; ?></td>
+    <td><?php echo $players['PlayerID']; ?></td>
+    <td><?php echo $players['FirstName']; ?></td>
+    <td><?php echo $players['LastName']; ?></td>
+    <td><?php echo $players['School']; ?></td>
+    <td><?php echo $players['Position']; ?></td>
   </tr>
   <?php
 }
