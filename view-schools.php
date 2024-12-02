@@ -3,10 +3,9 @@
   <table class="table">
     <thead>
       <tr>
-        <th>ID</th>
+        <th>Top 25 Ranking</th>
         <th>Name</th>
         <th>Mascot</th>
-        <th>Top 25 Ranking</th>
       </tr>
     </thead>
     <tbody>
@@ -14,10 +13,9 @@
 while ($school=$schools->fetch_assoc()) {
   ?>
   <tr>
-    <td><?php echo $school['SchoolID']; ?></td>
+    <td><?php echo $school['SchoolRanking']; ?></td>
     <td><?php echo $school['SchoolName']; ?></td>
     <td><?php echo $school['SchoolMascot']; ?></td>
-    <td><?php echo $school['SchoolRanking']; ?></td>
   </tr>
   <?php
 }
