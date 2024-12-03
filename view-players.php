@@ -7,7 +7,7 @@
         <th>First Name</th>
         <th>Last Name</th>
         <th>Position</th>
-        <th></th></h>
+        <th></th>
       </tr>
     </thead>
     <tbody>
