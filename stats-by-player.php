@@ -5,6 +5,6 @@ $pageTitle = "Stats by Player";
 
 Include "view-header.php";
 $stats = selectStatsByPlayer($_POST['pid']);
-include "view-stat-by-player.php";
+include "view-stats-by-player.php";
 Include "view-footer.php";
 ?>
