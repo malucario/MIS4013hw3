@@ -3,7 +3,7 @@
 <?php
 while ($school=$schools->fetch_assoc()) {
   ?>
-    <div class="card">>
+    <div class="card w-75">>
     <div class="card-body">
       <h5 class="card-title"><?php echo $school['SchoolName']; ?></h5>
       <p class="card-text">
