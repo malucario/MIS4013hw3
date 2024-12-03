@@ -18,7 +18,7 @@ while ($school=$schools->fetch_assoc()) {
 ?>
       </ul>
       </p>
-      <p class="card-text"><small class="text-body-secondary">Conference: <?php echo $school['SchoolConference']; ?></small></p>
+      <p class="card-text"><small class="text-body-secondary">Top 25 Rank: <?php echo $school['SchoolRanking']; ?></small></p>
     </div>
   </div>
 <?php
