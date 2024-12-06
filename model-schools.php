@@ -17,7 +17,7 @@ function insertSchool($sRanking, $sName, $sMascot, $sConference) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO Schools (SchoolRanking, SchoolName, SchoolMascot, SchoolConference) VALUES (?,?,?,?)");
-        $stmt->bind_params("isss",$sRanking, $sName, $sMascot, $sConference); 
+        $stmt->bind_param("isss",$sRanking, $sName, $sMascot, $sConference); 
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -31,7 +31,7 @@ function updateSchool($sRanking, $sName, $sMascot, $sConference, $sRank) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE Schools SET SchoolRanking=?, SchoolName=?, SchoolMascot=?, SchoolConference=? WHERE SchoolRanking=?");
-        $stmt->bind_params("isssi",$sRanking, $sName, $sMascot, $sConference, $sRank); 
+        $stmt->bind_param("isssi",$sRanking, $sName, $sMascot, $sConference, $sRank); 
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -45,7 +45,7 @@ function deleteSchool($sRanking) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE FROM Schools WHERE SchoolRanking=?");
-        $stmt->bind_params("i",$sRanking); 
+        $stmt->bind_param("i",$sRanking); 
         $success = $stmt->execute();
         $conn->close();
         return $success;
