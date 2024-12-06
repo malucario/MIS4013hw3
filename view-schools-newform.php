@@ -21,16 +21,16 @@
             <input type="number" class="form-control" id="sRanking" name="sRanking">
           </div>
            <div class="mb-3">
-            <label for="sName" class="form-label">School Ranking</label>
-            <input type="number" class="form-control" id="sName" name="sName">
+            <label for="sName" class="form-label">School Name</label>
+            <input type="text" class="form-control" id="sName" name="sName">
           </div> 
           <div class="mb-3">
             <label for="sMascot" class="form-label">School Mascot</label>
-            <input type="number" class="form-control" id="sMascot" name="sMascot">
+            <input type="text" class="form-control" id="sMascot" name="sMascot">
           </div> 
           <div class="mb-3">
             <label for="sConference" class="form-label">School Conference</label>
-            <input type="number" class="form-control" id="sConference" name="sConference">
+            <input type="text" class="form-control" id="sConference" name="sConference">
           </div>
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
