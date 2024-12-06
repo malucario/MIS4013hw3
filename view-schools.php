@@ -3,7 +3,7 @@
     <h1>Schools</h1>
   </div>
   <div class="col-auto">
-<? php
+<?php
   Include "view-schools-newform.php";
 ?>
   </div>
