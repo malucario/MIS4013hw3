@@ -27,11 +27,11 @@ function insertSchool($sRanking, $sName, $sMascot, $sConference) {
     }
 }
 
-function updateSchool($sRanking, $sName, $sMascot, $sConference, $sRanking) {
+function updateSchool($sRanking, $sName, $sMascot, $sConference, $sRank) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE Schools SET SchoolRanking=?, SchoolName=?, SchoolMascot=?, SchoolConference=? WHERE SchoolRanking=?");
-        $stmt->bind_params("isssi",$sRanking, $sName, $sMascot, $sConference, $sRanking); 
+        $stmt->bind_params("isssi",$sRanking, $sName, $sMascot, $sConference, $sRank); 
         $success = $stmt->execute();
         $conn->close();
         return $success;
