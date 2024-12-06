@@ -32,6 +32,7 @@
             <label for="sConference" class="form-label">School Conference</label>
             <input type="text" class="form-control" id="sConference" name="sConference">
           </div>
+          <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
