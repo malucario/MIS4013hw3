@@ -31,6 +31,11 @@ while ($school=$schools->fetch_assoc()) {
     <td><?php echo $school['SchoolMascot']; ?></td>
     <td><?php echo $school['SchoolConference']; ?></td>
     <td>
+<?php
+Include "view-schools-editform.php";
+?>
+    </td>
+    <td>
       <form method="post" action="">
         <input type="hidden" name="id" value="<?php echo $school['SchoolRanking']; ?>">
         <input type="hidden" name="actionType" value="Delete">
@@ -42,7 +47,6 @@ while ($school=$schools->fetch_assoc()) {
         </button>
       </form>
     </td>
-    <td></td>
     <td><a href="players-by-team.php?id=<?php echo $school['SchoolRanking']; ?>">Players</a></td>
   </tr>
   <?php
