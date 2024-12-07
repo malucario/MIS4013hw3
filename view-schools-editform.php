@@ -16,10 +16,6 @@
       </div>
       <div class="modal-body">
         <form method="post" action="">
-          <div class="mb-3">
-            <label for="sRanking<?php echo $school['schoolRanking'];?>" class="form-label">School Ranking</label>
-            <input type="number" class="form-control" id="sRanking<?php echo $school['schoolRanking'];?>" name="sRanking" value="<?php echo $school['schoolRanking'];?>">
-          </div>
            <div class="mb-3">
             <label for="sName<?php echo $school['schoolRanking'];?>" class="form-label">School Name</label>
             <input type="text" class="form-control" id="sName<?php echo $school['schoolRanking'];?>" name="sName" value="<?php echo $school['schoolName'];?>">
