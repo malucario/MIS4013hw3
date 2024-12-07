@@ -27,7 +27,7 @@ function insertSchool($sRanking, $sName, $sMascot, $sConference) {
     }
 }
 
-function updateSchool(, $sName, $sMascot, $sConference, $sRanking) {
+function updateSchool($sName, $sMascot, $sConference, $sRanking) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE Schools SET SchoolName=?, SchoolMascot=?, SchoolConference=? WHERE SchoolRanking=?");
