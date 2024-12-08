@@ -28,7 +28,7 @@
             <label for="sConference<?php echo $school['SchoolConference'];?>" class="form-label">School Conference</label>
             <input type="text" class="form-control" id="sConference<?php echo $school['SchoolConference'];?>" name="sConference" value="<?php echo $school['SchoolConference'];?>">
           </div>
-          <input type="hidden" name="sid" value="<?php echo $school['SchoolRanking'];?>">
+          <input type="hidden" name="schoolRanking" value="<?php echo $school['SchoolRanking'];?>">
           <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
