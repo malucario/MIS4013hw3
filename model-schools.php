@@ -31,7 +31,7 @@ function updateSchool($sName, $sMascot, $sConference, $sRanking) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE Schools SET SchoolName=?, SchoolMascot=?, SchoolConference=? WHERE SchoolRanking=?");
-        $stmt->bind_param("sssi", $sName, $sMascot, $sConference, $sRank); 
+        $stmt->bind_param("sssi", $sName, $sMascot, $sConference, $sRanking); 
         $success = $stmt->execute();
         $conn->close();
         return $success;
