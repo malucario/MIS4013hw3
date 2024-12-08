@@ -17,16 +17,16 @@
       <div class="modal-body">
         <form method="post" action="">
            <div class="mb-3">
-            <label for="sName<?php echo $school['schoolRanking'];?>" class="form-label">School Name</label>
-            <input type="text" class="form-control" id="sName<?php echo $school['schoolRanking'];?>" name="sName" value="<?php echo $school['schoolName'];?>">
+            <label for="sName<?php echo $school['schoolName'];?>" class="form-label">School Name</label>
+            <input type="text" class="form-control" id="sName<?php echo $school['schoolName'];?>" name="sName" value="<?php echo $school['schoolName'];?>">
           </div> 
           <div class="mb-3">
-            <label for="sMascot<?php echo $school['schoolRanking'];?>" class="form-label">School Mascot</label>
-            <input type="text" class="form-control" id="sMascot<?php echo $school['schoolRanking'];?>" name="sMascot" value="<?php echo $school['schoolMascot'];?>">
+            <label for="sMascot<?php echo $school['schoolMascot'];?>" class="form-label">School Mascot</label>
+            <input type="text" class="form-control" id="sMascot<?php echo $school['schoolMascot'];?>" name="sMascot" value="<?php echo $school['schoolMascot'];?>">
           </div> 
           <div class="mb-3">
-            <label for="sConference<?php echo $school['schoolRanking'];?>" class="form-label">School Conference</label>
-            <input type="text" class="form-control" id="sConference<?php echo $school['schoolRanking'];?>" name="sConference" value="<?php echo $school['schoolConference'];?>">
+            <label for="sConference<?php echo $school['schoolConference'];?>" class="form-label">School Conference</label>
+            <input type="text" class="form-control" id="sConference<?php echo $school['schoolConference'];?>" name="sConference" value="<?php echo $school['schoolConference'];?>">
           </div>
           <input type="hidden" name="sid" value="<?php echo $school['schoolRanking'];?>">
           <input type="hidden" name="actionType" value="Edit">
