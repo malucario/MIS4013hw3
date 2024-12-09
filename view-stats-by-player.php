@@ -1,6 +1,6 @@
 <h1>Stats by Player</h1>
 <?php
-  Include "view-stats-newform.php";
+  Include "view-stats-by-player-newform.php";
 ?>
 <div class="table-responsive">
   <table class="table">
@@ -29,7 +29,7 @@ while ($stat=$stats->fetch_assoc()) {
     <td><?php echo $stat['ExitVelo']; ?></td>
     <td>
 <?php
-Include "view-stats-editform.php";
+Include "view-stats-by-player-editform.php";
 ?>
     </td>
   <td>
