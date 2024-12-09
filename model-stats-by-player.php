@@ -14,11 +14,11 @@ function selectStatsByPlayer($pid) {
     }
 }
 
-function insertStats($sID, $pid, $sPA, $sAB, $sOPS, $sEV) {
+function insertStats($sID, $sPID, $sPA, $sAB, $sOPS, $sEV) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO Stats (StatsID, PlayerID, PA, AB, OPS, EvitVelo) VALUES (?,?,?,?,?,?)");
-        $stmt->bind_param("iiiidd",$sID, $pid, $sPA, $sAB, $sOPS, $sEV); 
+        $stmt->bind_param("iiiidd",$sID, sPID, $sPA, $sAB, $sOPS, $sEV); 
         $success = $stmt->execute();
         $conn->close();
         return $success;
