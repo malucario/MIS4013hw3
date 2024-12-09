@@ -15,14 +15,14 @@ if (isset($_POST['actionType'])) {
       }
       break;
     case "Delete":
-      if (deleteSchool($_POST['dID'])) {
+      if (deleteDraft($_POST['dID'])) {
         echo '<div class="alert alert-success" role="alert">Draft data deleted.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error</div>';
       }
       break;
     case "Edit":
-      if (updateSchool($_POST['dRound'], $_POST['dPick'], $_POST['dTeam'], $_POST['dBonus'])) {
+      if (updateDraft($_POST['dRound'], $_POST['dPick'], $_POST['dTeam'], $_POST['dBonus'])) {
         echo '<div class="alert alert-success" role="alert">Draft data edited.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error</div>';
@@ -31,7 +31,7 @@ if (isset($_POST['actionType'])) {
   }
 }
 
-$drafts = selectDrafts();
+$drafts = selectDraft();
 include "view-draft.php";
 Include "view-footer.php";
 ?>
