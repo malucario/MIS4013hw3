@@ -12,6 +12,7 @@
   <table class="table">
     <thead>
       <tr>
+        <th>StatsID</th>
         <th>PlayerID</th>
         <th>PA</th>
         <th>AB</th>
