@@ -27,6 +27,7 @@
 while ($stat=$stats->fetch_assoc()) {
   ?>
   <tr>
+    <td><?php echo $stat['StatsID']; ?></td>
     <td><?php echo $stat['PlayerID']; ?></td>
     <td><?php echo $stat['PA']; ?></td>
     <td><?php echo $stat['AB']; ?></td>
