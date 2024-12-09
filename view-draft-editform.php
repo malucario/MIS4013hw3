@@ -22,7 +22,7 @@
           </div> 
           <div class="mb-3">
             <label for="dPick<?php echo $draft['Pick'];?>" class="form-label">Pick Drafted</label>
-            <input type="number" class="form-control" id="dPick<?php echo $draft['Pick'];?>" name="dRound" value="<?php echo $draft['Pick'];?>">
+            <input type="number" class="form-control" id="dPick<?php echo $draft['Pick'];?>" name="dPick" value="<?php echo $draft['Pick'];?>">
           </div> 
           <div class="mb-3">
             <label for="dTeam<?php echo $draft['Team'];?>" class="form-label">Team</label>
