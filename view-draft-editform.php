@@ -17,11 +17,11 @@
       <div class="modal-body">
         <form method="post" action="">
            <div class="mb-3">
-            <label for="dRound<?php echo $draft['Round'];?>" class="form-label">Round</label>
+            <label for="dRound<?php echo $draft['Round'];?>" class="form-label">Round Drafted</label>
             <input type="number" class="form-control" id="dRound<?php echo $draft['Round'];?>" name="dRound" value="<?php echo $draft['Round'];?>">
           </div> 
           <div class="mb-3">
-            <label for="dPick<?php echo $draft['Pick'];?>" class="form-label">Round</label>
+            <label for="dPick<?php echo $draft['Pick'];?>" class="form-label">Pick Drafted</label>
             <input type="number" class="form-control" id="dPick<?php echo $draft['Pick'];?>" name="dRound" value="<?php echo $draft['Pick'];?>">
           </div> 
           <div class="mb-3">
@@ -29,7 +29,7 @@
             <input type="text" class="form-control" id="dTeam<?php echo $draft['Team'];?>" name="dTeam" value="<?php echo $draft['Team'];?>">
           </div>
            <div class="mb-3">
-            <label for="dBonus<?php echo $draft['Bonus'];?>" class="form-label">Signing bonus</label>
+            <label for="dBonus<?php echo $draft['Bonus'];?>" class="form-label">Signing Bonus</label>
             <input type="number" class="form-control" id="dBonus<?php echo $draft['Bonus'];?>" name="dBonus" value="<?php echo $draft['Bonus'];?>">
           </div>
           <input type="hidden" name="dID" value="<?php echo $draft['DraftID'];?>">
