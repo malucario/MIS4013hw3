@@ -30,7 +30,7 @@ function insertStats($stID, $stPID, $stPA, $stAB, $stOPS, $stEV) {
 function updateStats($stPA, $stAB, $stOPS, $stEV, $stID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE Stats SET AB=?, PA=?, OPS=? WHERE StatsID=?");
+        $stmt = $conn->prepare("UPDATE Stats SET AB=?, PA=?, OPS=?, ExitVelo=?WHERE StatsID=?");
         $stmt->bind_param("iiddi", $stPA, $stAB, $stOPS, $stEV, $stID); 
         $success = $stmt->execute();
         $conn->close();
