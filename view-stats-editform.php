@@ -26,11 +26,11 @@
           </div> 
           <div class="mb-3">
             <label for="stOPS<?php echo $stat['OPS'];?>" class="form-label">OPS</label>
-            <input type="decimal" class="form-control" id="stOPS<?php echo $stat['OPS'];?>" name="stOPS" value="<?php echo $stat['OPS'];?>">
+            <input type="number" class="form-control" id="stOPS<?php echo $stat['OPS'];?>" name="stOPS" value="<?php echo $stat['OPS'];?>" step="0.001">
           </div>
            <div class="mb-3">
             <label for="stEV<?php echo $stat['ExitVelo'];?>" class="form-label">Exit Velocity</label>
-            <input type="decimal" class="form-control" id="stEV<?php echo $stat['ExitVelo'];?>" name="stEV" value="<?php echo $stat['ExitVelo'];?>">
+            <input type="number" class="form-control" id="stEV<?php echo $stat['ExitVelo'];?>" name="stEV" value="<?php echo $stat['ExitVelo'];?>" step="0.1">
           </div>
           <input type="hidden" name="stID" value="<?php echo $stat['StatsID'];?>">
           <input type="hidden" name="actionType" value="Edit">
