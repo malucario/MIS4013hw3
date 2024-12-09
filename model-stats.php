@@ -13,11 +13,11 @@ function selectStats() {
     }
 }
 
-function insertStats($sID, $sPID, $sPA, $sAB, $sOPS, $sEV) {
+function insertStats($stID, $stPID, $stPA, $stAB, $stOPS, $stEV) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO Stats (StatsID, PlayerID, AB, PA, OPS, ExitVelo) VALUES (?,?,?,?,?,?)");
-        $stmt->bind_param("iiiidd", $sID, $sPID, $sPA, $sAB, $sOPS, $sEV); 
+        $stmt->bind_param("iiiidd", $stID, $stPID, $stPA, $stAB, $stOPS, $stEV); 
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -27,11 +27,11 @@ function insertStats($sID, $sPID, $sPA, $sAB, $sOPS, $sEV) {
     }
 }
 
-function updateStats($sPA, $sAB, $sOPS, $sEV, $sID) {
+function updateStats($stPA, $stAB, $stOPS, $stEV, $stID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE Stats SET AB=?, PA=?, OPS=? WHERE StatsID=?");
-        $stmt->bind_param("iiddi", $sPA, $sAB, $sOPS, $sEV, $sID); 
+        $stmt->bind_param("iiddi", $stPA, $stAB, $stOPS, $stEV, $stID); 
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -41,11 +41,11 @@ function updateStats($sPA, $sAB, $sOPS, $sEV, $sID) {
     }
 }
 
-function deleteStats($sID) {
+function deleteStats($stID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE FROM Stats WHERE StatsID=?");
-        $stmt->bind_param("i",$sID); 
+        $stmt->bind_param("i",$stID); 
         $success = $stmt->execute();
         $conn->close();
         return $success;
