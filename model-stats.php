@@ -2,7 +2,7 @@
 function selectStats() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT PlayerID, PA, AB, OPS, ExitVelo FROM Stats");
+        $stmt = $conn->prepare("SELECT StatsID, PlayerID, PA, AB, OPS, ExitVelo FROM Stats");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
