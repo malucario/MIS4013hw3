@@ -21,7 +21,7 @@
             <input type="number" class="form-control" id="sID" name="sID">
           </div>
           <div class="mb-3">
-            <label for="pid" class="form-label">Player ID</label>
+            <label for="sPID" class="form-label">Player ID</label>
             <input type="number" class="form-control" id="pid" name="pid">
           </div>
           <div class="mb-3">
