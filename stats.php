@@ -33,7 +33,7 @@ if (isset($_POST['actionType'])) {
 }
 
 
-$players = selectStats();
+$stats = selectStats();
 include "view-stats.php";
 Include "view-footer.php";
 ?>
