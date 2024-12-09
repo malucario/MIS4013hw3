@@ -30,7 +30,7 @@
           </div>
            <div class="mb-3">
             <label for="stEV<?php echo $stat['ExitVelo'];?>" class="form-label">Exit Velocity</label>
-            <input type="text" class="form-control" id="stEV<?php echo $stat['ExitVelo'];?>" name="stEV" value="<?php echo $school['SchoolConference'];?>">
+            <input type="text" class="form-control" id="stEV<?php echo $stat['ExitVelo'];?>" name="stEV" value="<?php echo $stat['ExitVelo'];?>">
           </div>
           <input type="hidden" name="stID" value="<?php echo $stat['StatsID'];?>">
           <input type="hidden" name="actionType" value="Edit">
