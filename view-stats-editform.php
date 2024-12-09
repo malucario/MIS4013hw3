@@ -18,19 +18,19 @@
         <form method="post" action="">
            <div class="mb-3">
             <label for="stPA<?php echo $stat['PA'];?>" class="form-label">Plate Appearances</label>
-            <input type="text" class="form-control" id="stPA<?php echo $stat['PA'];?>" name="stPA" value="<?php echo $stat['PA'];?>">
+            <input type="number" class="form-control" id="stPA<?php echo $stat['PA'];?>" name="stPA" value="<?php echo $stat['PA'];?>">
           </div> 
           <div class="mb-3">
             <label for="stAB<?php echo $stat['AB'];?>" class="form-label">At-bats</label>
-            <input type="text" class="form-control" id="stAB<?php echo $stat['AB'];?>" name="stAB" value="<?php echo $stat['AB'];?>">
+            <input type="number" class="form-control" id="stAB<?php echo $stat['AB'];?>" name="stAB" value="<?php echo $stat['AB'];?>">
           </div> 
           <div class="mb-3">
             <label for="stOPS<?php echo $stat['OPS'];?>" class="form-label">OPS</label>
-            <input type="text" class="form-control" id="stOPS<?php echo $stat['OPS'];?>" name="stOPS" value="<?php echo $stat['OPS'];?>">
+            <input type="decimal" class="form-control" id="stOPS<?php echo $stat['OPS'];?>" name="stOPS" value="<?php echo $stat['OPS'];?>">
           </div>
            <div class="mb-3">
             <label for="stEV<?php echo $stat['ExitVelo'];?>" class="form-label">Exit Velocity</label>
-            <input type="text" class="form-control" id="stEV<?php echo $stat['ExitVelo'];?>" name="stEV" value="<?php echo $stat['ExitVelo'];?>">
+            <input type="decimal" class="form-control" id="stEV<?php echo $stat['ExitVelo'];?>" name="stEV" value="<?php echo $stat['ExitVelo'];?>">
           </div>
           <input type="hidden" name="stID" value="<?php echo $stat['StatsID'];?>">
           <input type="hidden" name="actionType" value="Edit">
