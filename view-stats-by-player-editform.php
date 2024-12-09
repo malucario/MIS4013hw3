@@ -7,11 +7,11 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="editStatModal<?php echo $stat['StatsID'];?>" tabindex="-1" aria-labelledby="editStatModalLabel<?php echo $stat['StatsID'];?>" aria-hidden="true">
+<div class="modal fade" id="editStatsModal<?php echo $stat['StatsID'];?>" tabindex="-1" aria-labelledby="editStatsModalLabel<?php echo $stat['StatsID'];?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editStatModalLabel<?php echo $stat['StatsID'];?>">Edit stats</h1>
+        <h1 class="modal-title fs-5" id="editStatsModalLabel<?php echo $stat['StatsID'];?>">Edit stats</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
