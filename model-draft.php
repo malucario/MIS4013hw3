@@ -16,21 +16,8 @@ function selectDrafts() {
 function insertDrafts($dID, $dPID, $dRound, $dPick, $dTeam, $dBonus) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("
-            INSERT INTO Draft (DraftID, PlayerID, Round, Pick, Team, Bonus)
-            VALUES (?, ?, ?, ?, ?, ?)
-        ");
-
-        // Handle NULL values for optional fields
-        $stmt->bind_param(
-            "iiiisi",
-            $dID,
-            $dPID,
-            $dRound !== "" ? $dRound : null,
-            $dPick !== "" ? $dPick : null,
-            $dTeam !== "" ? $dTeam : null,
-            $dBonus !== "" ? $dBonus : null
-        );
+        $stmt = $conn->prepare("INSERT INTO Draft (DraftID, PlayerID, Round, Pick, Team, Bonus) VALUES (?,?,?,?,?,?)");
+        $stmt->bind_param("iiiisi",$dID, $dPID, $dRound, $dPick, $dTeam, $dBonus); 
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -43,24 +30,8 @@ function insertDrafts($dID, $dPID, $dRound, $dPick, $dTeam, $dBonus) {
 function updateDrafts($dRound, $dPick, $dTeam, $dBonus, $dID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE Draft 
-            SET 
-                Round = IFNULL(?, Round), 
-                Pick = IFNULL(?, Pick), 
-                Team = IFNULL(?, Team), 
-                Bonus = IFNULL(?, Bonus) 
-            WHERE DraftID = ?
-        ");
-
-        // Use NULL if the value is empty, otherwise bind the actual value
-        $stmt->bind_param(
-            "iisii", 
-            $dRound !== "" ? $dRound : null,
-            $dPick !== "" ? $dPick : null,
-            $dTeam !== "" ? $dTeam : null,
-            $dBonus !== "" ? $dBonus : null,
-            $dID
-        ); 
+        $stmt = $conn->prepare("UPDATE Draft SET Round=?, Pick=?, Team=?, Bonus=? WHERE DraftID=?");
+        $stmt->bind_param("iisii", $dRound, $dPick, $dTeam, $dBonus, $dID); 
         $success = $stmt->execute();
         $conn->close();
         return $success;
