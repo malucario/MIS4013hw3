@@ -34,11 +34,11 @@
           </div>
           <div class="mb-3">
             <label for="stOPS" class="form-label">OPS</label>
-            <input type="number" class="form-control" id="stOPS" name="stOPS">
+            <input type="number" class="form-control" id="stOPS" name="stOPS" step="0.001">
           </div>
           <div class="mb-3">
             <label for="stEV" class="form-label">Exit Velocity</label>
-            <input type="number" class="form-control" id="stEV" name="stEV">
+            <input type="number" class="form-control" id="stEV" name="stEV" step="0.1">
           </div>
           <input type="hidden" name="actionType" value="Add">
           <button type="number" class="btn btn-primary">Save</button>
