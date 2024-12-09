@@ -13,7 +13,7 @@ function selectPlayers() {
     }
 }
 
-function insertPlayers($pID, $pSID, $pFName, $pLName, $pPosition) {
+function insertPlayer($pID, $pSID, $pFName, $pLName, $pPosition) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO Players (PlayerID, SchoolRanking, FirstName, LastName, Position) VALUES (?,?,?,?,?)");
@@ -27,7 +27,7 @@ function insertPlayers($pID, $pSID, $pFName, $pLName, $pPosition) {
     }
 }
 
-function updateSchool($pSID, $pFName, $pLName, $pPosition, $pID) {
+function updatePlayer($pSID, $pFName, $pLName, $pPosition, $pID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE Players SET SchoolID=?, FirstName=?, LastName=?, Position=? WHERE PlayerID=?");
@@ -41,7 +41,7 @@ function updateSchool($pSID, $pFName, $pLName, $pPosition, $pID) {
     }
 }
 
-function deleteSchool($pID) {
+function deletePlayer($pID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE FROM Players WHERE PlayerID=?");
