@@ -30,16 +30,39 @@ function insertDrafts($dID, $dPID, $dRound, $dPick, $dTeam, $dBonus) {
 function updateDrafts($dRound, $dPick, $dTeam, $dBonus, $dID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE Draft SET Round=?, Pick=?, Team=?, Bonus=? WHERE DraftID=?");
-        $stmt->bind_param("iisii", $dRound, $dPick, $dTeam, $dBonus, $dID); 
+        // Prepare the SQL query
+        $stmt = $conn->prepare("
+            UPDATE Draft 
+            SET Round = ?, Pick = ?, Team = ?, Bonus = ? 
+            WHERE DraftID = ?
+        ");
+        // Dynamically bind parameters, explicitly handling NULL values
+        $round = $dRound !== "" && $dRound !== null ? (int)$dRound : null;
+        $pick = $dPick !== "" && $dPick !== null ? (int)$dPick : null;
+        $bonus = $dBonus !== "" && $dBonus !== null ? (float)$dBonus : null;
+        $team = $dTeam !== "" && $dTeam !== null ? $dTeam : null;
+        // Bind parameters dynamically
+        $stmt->bind_param(
+            "iisii",
+            $round,
+            $pick,
+            $team,
+            $bonus,
+            $dID
+        );
+        // Execute the query
         $success = $stmt->execute();
+        $stmt->close();
         $conn->close();
         return $success;
     } catch (Exception $e) {
-        $conn->close();
+        if (isset($conn)) {
+            $conn->close();
+        }
         throw $e;
     }
 }
+
 
 function deleteDrafts($dID) {
     try {
