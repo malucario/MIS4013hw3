@@ -8,7 +8,7 @@ Include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-      if (insertDraft($_POST['dID'], $_POST['dPID'], $_POST['dRound'], $_POST['dPick'], $_POST['dBonus'])) {
+      if (insertDraft($_POST['dID'], $_POST['dPID'], $_POST['dRound'], $_POST['dPick'], $_POST['dTeam'], $_POST['dBonus'])) {
         echo '<div class="alert alert-success" role="alert">Draft data added.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error</div>';
@@ -22,7 +22,7 @@ if (isset($_POST['actionType'])) {
       }
       break;
     case "Edit":
-      if (updateSchool($_POST['dRound'], $_POST['dPick'], $_POST['dBonus'])) {
+      if (updateSchool($_POST['dRound'], $_POST['dPick'], $_POST['dTeam'], $_POST['dBonus'])) {
         echo '<div class="alert alert-success" role="alert">Draft data edited.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error</div>';
