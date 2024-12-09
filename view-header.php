@@ -26,9 +26,6 @@
           <a class="nav-link" href="players.php">Players</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="stats.php">Stats</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="draft.php">Draft Info</a>
         </li>
         <li class="nav-item">
