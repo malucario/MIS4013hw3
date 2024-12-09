@@ -31,7 +31,7 @@ if (isset($_POST['actionType'])) {
   }
 }
 
-$schools = selectSchools();
-include "view-schools.php";
+$drafts = selectDrafts();
+include "view-draft.php";
 Include "view-footer.php";
 ?>
