@@ -2,7 +2,7 @@
 function selectStats() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT FirstName, LastName, PA, AB, OPS, ExitVelo FROM Players P JOIN Stats S ON P.PlayerID=S.PlayerID");
+        $stmt = $conn->prepare("SELECT PlayerID, PA, AB, OPS, ExitVelo FROM Stats");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
