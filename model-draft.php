@@ -1,5 +1,5 @@
 <?php
-function selectDraft() {
+function selectDrafts() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT DraftID, PlayerID, Round, Pick, Team, Bonus FROM Draft");
@@ -13,7 +13,7 @@ function selectDraft() {
     }
 }
 
-function insertSchool($dID, $dPID, $dRound, $dPick, $dTeam, $dBonus) {
+function insertDrafts($dID, $dPID, $dRound, $dPick, $dTeam, $dBonus) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO Draft (DraftID, PlayerID, Round, Pick, Team, Bonus) VALUES (?,?,?,?,?,?)");
@@ -27,7 +27,7 @@ function insertSchool($dID, $dPID, $dRound, $dPick, $dTeam, $dBonus) {
     }
 }
 
-function updateSchool($dRound, $dPick, $dTeam, $dBonus, $dID) {
+function updateDrafts($dRound, $dPick, $dTeam, $dBonus, $dID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE Draft SET Round=?, Pick=?, Team=?, Bonus=? WHERE DraftID=?");
@@ -41,7 +41,7 @@ function updateSchool($dRound, $dPick, $dTeam, $dBonus, $dID) {
     }
 }
 
-function deleteSchool($dID) {
+function deleteDrafts($dID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE FROM Draft WHERE DraftID=?");
