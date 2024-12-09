@@ -1,4 +1,4 @@
-<h1>Stats by Player</h1>
+<h1>Player Stats</h1>
 <?php
   Include "view-stats-by-player-newform.php";
 ?>
