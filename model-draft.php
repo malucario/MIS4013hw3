@@ -39,7 +39,7 @@ function updateDrafts($dRound, $dPick, $dTeam, $dBonus, $dID) {
         // Dynamically bind parameters, explicitly handling NULL values
         $round = $dRound !== "" && $dRound !== null ? (int)$dRound : null;
         $pick = $dPick !== "" && $dPick !== null ? (int)$dPick : null;
-        $bonus = $dBonus !== "" && $dBonus !== null ? (float)$dBonus : null;
+        $bonus = $dBonus !== "" && $dBonus !== null ? (int)$dBonus : null;
         $team = $dTeam !== "" && $dTeam !== null ? $dTeam : null;
         // Bind parameters dynamically
         $stmt->bind_param(
